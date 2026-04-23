@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thanh toán — Trà Thanh Tịnh</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+</head>
+<body class="checkout-page">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Trà Thanh Tịnh">
+        <span>Trà Thanh Tịnh</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn cart-btn" aria-haspopup="dialog" aria-label="Giỏ hàng">
+          <i class="fa-solid fa-cart-shopping"></i><span class="cart-count">0</span>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile off-canvas nav (required for hamburger) -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang chủ</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <main class="container section-padding">
+    <header class="page-header">
+      <h1>Thanh toán</h1>
+      <p class="lead">Kiểm tra lại đơn hàng và nhập thông tin giao hàng</p>
+    </header>
+
+    <div class="checkout-grid">
+      <section class="checkout-form-panel card-panel">
+        <h2>Thông tin giao hàng</h2>
+        <p class="muted">Nhập chính xác để giao hàng nhanh chóng.</p>
+
+        <form id="checkoutForm" class="checkout-form" novalidate>
+          <div class="grid-form">
+            <div class="form-row">
+              <label for="ship_name">Họ và tên</label>
+              <input id="ship_name" name="ship_name" required />
+              <div class="field-error" id="err-ship_name"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="ship_email">Email</label>
+              <input id="ship_email" name="ship_email" type="email" required />
+              <div class="field-error" id="err-ship_email"></div>
+            </div>
+
+            <div class="form-row">
+              <label for="ship_phone">Số điện thoại</label>
+              <input id="ship_phone" name="ship_phone" required />
+              <div class="field-error" id="err-ship_phone"></div>
+            </div>
+
+            <div class="form-row full">
+              <label for="ship_address">Địa chỉ giao hàng</label>
+              <input id="ship_address" name="ship_address" required />
+              <div class="field-error" id="err-ship_address"></div>
+            </div>
+          </div>
+
+          <h3 class="mt-16">Phương thức thanh toán</h3>
+          <div class="payment-methods" role="radiogroup" aria-label="Phương thức thanh toán">
+            <label><input type="radio" name="payment" value="cod" checked /> Thanh toán khi nhận hàng (COD)</label>
+            <label><input type="radio" name="payment" value="card" /> Thanh toán bằng thẻ (mô phỏng)</label>
+          </div>
+
+          <div id="cardFields" class="card-fields hidden" aria-hidden="true">
+            <div class="form-row">
+              <label for="card_number">Số thẻ</label>
+              <input id="card_number" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" />
+              <div class="field-error" id="err-card_number"></div>
+            </div>
+
+            <div class="flex-row">
+              <div class="flex-1">
+                <label for="card_exp">Hết hạn (MM/YY)</label>
+                <input id="card_exp" maxlength="5" placeholder="MM/YY" />
+                <div class="field-error" id="err-card_exp"></div>
+              </div>
+
+              <div class="col-120">
+                <label for="card_cvc">CVC</label>
+                <input id="card_cvc" maxlength="4" inputmode="numeric" />
+                <div class="field-error" id="err-card_cvc"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions mt-16">
+            <button type="submit" class="btn primary" id="placeOrderBtn">Đặt hàng</button>
+            <a href="products.html" class="btn secondary">Tiếp tục mua sắm</a>
+          </div>
+        </form>
+
+        <div class="panel-footer mt-16">
+          <p class="muted">Phí vận chuyển có thể được tính dựa trên trọng lượng và địa chỉ. Đây là bản mô phỏng thanh toán.</p>
+        </div>
+      </section>
+
+      <!-- Right: Order summary -->
+      <aside class="order-summary-panel card-panel">
+        <h2>Đơn hàng</h2>
+        <div id="orderItems" aria-live="polite"></div>
+
+        <div class="order-summary-totals">
+          <div class="row"><span>Tạm tính</span><span id="subtotalText">0₫</span></div>
+          <div class="row"><span>Phí vận chuyển</span><span id="shippingText">0₫</span></div>
+          <div class="row total"><strong>Tổng</strong><strong id="grandTotal">0₫</strong></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col about">
+        <a href="index.html" class="footer-logo">
+          
+          <span>Trà Thanh Tịnh</span>
+        </a>
+        <p>Chọn lựa những lá trà tinh túy, giao tận tay bạn.</p>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact">
+        <h4>Liên hệ</h4>
+        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Đăng ký nhận tin</h4>
+        <form id="footerNewsletter" class="newsletter-form" aria-label="Đăng ký newsletter">
+          <input type="email" placeholder="Email của bạn" required />
+          <button class="btn primary" type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-body" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <button class="btn primary full" id="checkoutBtn">Thanh toán</button>
+    </div>
+  </aside>
+
+  <div id="pageOverlay" class="overlay"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

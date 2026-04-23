@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trà Thanh Tịnh — Sản phẩm</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head></head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span>Trà Thanh Tịnh</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Trang chủ</a>
+        <a href="products.html" class="active">Sản phẩm</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn cart-btn" id="cartBtn" aria-haspopup="dialog" aria-label="Giỏ hàng">
+          <i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang chủ</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <main class="container products-page">
+    <h1>Sản phẩm</h1>
+    <div class="controls">
+      <input id="searchInput" type="search" placeholder="Tìm sản phẩm..." />
+      
+    </div>
+
+    <div class="product-grid" id="productGrid">
+     
+      <article class="card product-card">
+        <img src="img/anh1.png" alt="Trà Việt Quất"/>
+        <div class="card-body">
+          <h4>Trà Việt Quất</h4>
+          <p>Hương vị đậm đà, hậu ngọt.</p>
+          <div class="card-actions">
+            <div class="price">120.000₫</div>
+            <div class="actions">  
+              <button class="btn primary" data-id="tea-01" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product-card">
+        <img src="img/anh2.png" alt="Trà Vải"/>
+        <div class="card-body">
+          <h4>Trà Vải</h4>
+          <p>Hương vị thanh mát, dễ chịu.</p>
+          <div class="card-actions">
+            <div class="price">90.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-02" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product-card">
+        <img src="img/anh3.png" alt="Trà Dâu Tây"/>
+        <div class="card-body">
+          <h4>Trà Dâu Tây</h4>
+          <p>Hương thơm nồng, phù hợp pha ấm.</p>
+          <div class="card-actions">
+            <div class="price">110.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-03" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product-card">
+        <img src="img/tratao.png" alt=""/>
+        <div class="card-body">
+          <h4>Trà Táo</h4>
+          <p>Hương vị ngọt ngào, dễ chịu.</p>
+          <div class="card-actions">
+            <div class="price">95.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-04" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product-card">
+        <img src="img/anh4.png" alt=""/>
+        <div class="card-body">
+          <h4>Trà Cam Đào</h4>
+          <p>Hương cam đào tươi mát.</p>
+          <div class="card-actions">
+            <div class="price">130.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-05" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="card product-card">
+        <img src="img/anh5.png" alt=""/>
+        <div class="card-body">
+          <h4>Trà Xoài</h4>
+          <p>Hương vị nhiệt đới, sảng khoái.</p>
+          <div class="card-actions">
+            <div class="price">105.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-06" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+       <article class="card product-card">
+        <img src="img/trachanh.png" alt=""/>
+        <div class="card-body">
+          <h4>Trà Chanh</h4>
+          <p>Giải khát, thanh mát.</p>
+          <div class="card-actions">
+            <div class="price">122.000₫</div>
+            <div class="actions">
+              <button class="btn primary" data-id="tea-03" data-action="add">Thêm vào giỏ</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+ 
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col about">
+        <a href="index.html" class="footer-logo">
+          <span>Trà Thanh Tịnh</span>
+        </a>
+        <p>Chọn lựa những lá trà tinh túy, giao tận tay bạn. Chúng tôi cam kết chất lượng từ vườn tới tách trà.</p>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact">
+        <h4>Liên hệ</h4>
+        <p>Địa chỉ: 123 Đường Trà, Quận Thưởng Thức, Thành phố</p>
+        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+        <p>Email: <a href="mailto:lienhe@trathanhtinh.vn">lienhe@trathanhtinh.vn</a></p>
+        <div class="socials" aria-hidden="true">
+          <a href="#" class="social">🐦</a>
+          <a href="#" class="social">📘</a>
+          <a href="#" class="social">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Đăng ký nh��n tin</h4>
+        <p>Nhận khuyến mãi & tin tức mới nhất qua email.</p>
+        <form id="footerNewsletter" class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!'); this.reset();">
+          <input type="email" placeholder="Email của bạn" required />
+          <button class="btn primary" type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© <span id="year"></span> Trà Thanh Tịnh. Bản quyền mọi quyền được bảo lưu.</small>
+        <div class="payment-methods" aria-hidden="true">
+          <span class="pm-label">Thanh toán:</span>
+          <span class="pm">VISA</span>
+          <span class="pm">Mastercard</span>
+          <span class="pm">MOMO</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer (giữ nguyên) -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-body" id="cartItems">
+      <!-- Items rendered by JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <button class="btn primary full" id="checkoutBtn">Thanh toán</button>
+    </div>
+  </aside>
+  <div id="pageOverlay" class="overlay"></div>
+
+  <script>
+    (function(){ const y = new Date().getFullYear(); const el = document.getElementById('year'); if(el) el.textContent = y; })();
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

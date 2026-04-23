@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trà Thanh Tịnh — Trang chủ</title>
+  <link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head></head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Trà Thanh Tịnh">
+       
+        <span>Trà Thanh Tịnh</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="contact.html">Liên hệ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn cart-btn" id="cartBtn" aria-haspopup="dialog" aria-label="Giỏ hàng">
+          <i class="fa-solid fa-cart-shopping"></i><span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide Nav -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-close" aria-label="Đóng menu">✕</button>
+    <a href="index.html">Trang chủ</a>
+    <a href="products.html">Sản phẩm</a>
+    <a href="contact.html">Liên hệ</a>
+  </div>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Trà Thanh Tịnh — Hương vị thiên nhiên</h1>
+          <p>Trải nghiệm những tách trà tinh tế, tuyển chọn từ nguồn nguyên liệu sạch.</p>
+          <a href="products.html" class="btn primary">Khám phá sản phẩm</a>
+        </div>
+        <div class="hero-image" >
+          <img src="img/tra.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="container intro">
+      <div class="intro-inner">
+        <div class="intro-image" >
+          <img src="img/xanh.png" alt="" />
+        </div>
+        <div class="intro-text">
+          <h2>Về chúng tôi</h2>
+          <p>
+            Trà Thanh Tịnh là thương hiệu trà thuần Việt, tập hợp những vùng trà ngon
+            được canh tác bền vững. Chúng tôi chăm sóc, thu hái và xử lý theo quy trình
+            truyền thống kết hợp công nghệ hiện đại để giữ trọn hương vị tự nhiên.
+          </p>
+          <p>
+            Cam kết của chúng tôi: nguyên liệu sạch, quy trình minh bạch và dịch vụ
+            tận tâm. Mỗi tách trà là một hành trình tìm về sự thư thái.
+          </p>
+          <a href="contact.html" class="btn secondary">Tìm hiểu thêm</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container featured">
+      <h2>Sản phẩm nổi bật</h2>
+      <div class="product-grid" id="featuredGrid">
+        <article class="card product-card">
+          <img src="img/anh1.png" alt=""/>
+          <div class="card-body">
+            <h4>Trà Việt Quất</h4>
+            <p>Hương vị đậm đà, hậu ngọt.</p>
+            <div class="card-actions">
+              <div class="price">120.000₫</div>
+              <div class="actions">
+                <button class="btn primary" data-id="tea-01" data-action="add">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card product-card">
+          <img src="img/anh2.png" alt=""/>
+          <div class="card-body">
+            <h4>Trà Vải</h4>
+            <p>Hương vị thanh mát, dễ chịu.</p>
+            <div class="card-actions">
+              <div class="price">90.000₫</div>
+              <div class="actions">
+                <button class="btn primary" data-id="tea-02" data-action="add">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card product-card">
+          <img src="img/anh3.png" alt=""/>
+          <div class="card-body">
+            <h4>Trà Dâu Tây</h4>
+            <p>Hương thơm nồng, phù hợp pha ấm.</p>
+            <div class="card-actions">
+              <div class="price">110.000₫</div>
+              <div class="actions">
+                <button class="btn primary" data-id="tea-03" data-action="add">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card product-card">
+          <img src="img/tratao.png" alt=""/>
+          <div class="card-body">
+            <h4>Trà Táo</h4>
+            <p>Hương vị ngọt ngào, dễ chịu.</p>
+            <div class="card-actions">
+              <div class="price">95.000₫</div>
+              <div class="actions">
+                <button class="btn primary" data-id="tea-04" data-action="add">Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container news">
+      <div class="news-header">
+        <h2>Tin tức & Cẩm nang</h2>
+        <p class="muted">Bài viết về trà, cách pha và các cập nhật từ Trà Thanh Tịnh</p>
+      </div>
+
+      <div class="news-grid">
+        <article class="news-card">
+          <img src="https://picsum.photos/seed/news1/800/500" alt="Tin tức 1" />
+          <div class="news-body">
+            <time datetime="2026-01-10">10 Jan 2026</time>
+            <h3>5 cách pha trà xanh giữ nguyên hương vị</h3>
+            <p>Hướng dẫn từng bước giúp bạn pha trà xanh đúng nhiệt độ và thời gian để giữ trọn vị thanh mát.</p>
+            <a href="#" class="btn secondary">Đọc tiếp</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://picsum.photos/seed/news2/800/500" alt="Tin tức 2" />
+          <div class="news-body">
+            <time datetime="2025-12-20">20 Dec 2025</time>
+            <h3>Quy trình chọn lá trà hữu cơ — từ vườn tới tách</h3>
+            <p>Tìm hiểu quy trình canh tác hữu cơ và tại sao nó quan trọng cho chất lượng trà.</p>
+            <a href="#" class="btn secondary">Đọc tiếp</a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="https://picsum.photos/seed/news3/800/500" alt="Tin tức 3" />
+          <div class="news-body">
+            <time datetime="2025-11-05">05 Nov 2025</time>
+            <h3>Ưu nhược điểm của từng loại trà phổ biến</h3>
+            <p>So sánh trà xanh, trà ô long và trà đen để bạn dễ dàng chọn loại phù hợp.</p>
+            <a href="#" class="btn secondary">Đọc tiếp</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="news-more">
+        <a href="#" class="btn primary">Xem tất cả bài viết</a>
+      </div>
+    </section>
+
+    <section class="container about">
+      <div class="about-card">
+        <h3>Cam kết chất lượng</h3>
+        <p>Nguyên liệu thiên nhiên, quy trình sản xuất tinh tế, giao hàng nhanh chóng.</p>
+      </div>
+      <div class="about-card">
+        <h3>Dịch vụ khách hàng</h3>
+        <p>Hỗ trợ tận tâm, đổi trả trong 7 ngày nếu lỗi do nhà sản xuất.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col about">
+        <a href="index.html" class="footer-logo">
+          <span>Trà Thanh Tịnh</span>
+        </a>
+        <p>Chọn lựa những lá trà tinh túy, giao tận tay bạn. Chúng tôi cam kết chất lượng từ vườn tới tách trà.</p>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="products.html">Sản phẩm</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+          <li><a href="#">Chính sách đổi trả</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact">
+        <h4>Liên hệ</h4>
+        <p>Địa chỉ: 123 Đường Trà, Quận Thưởng Thức, Thành phố</p>
+        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+        <p>Email: <a href="mailto:lienhe@trathanhtinh.vn">lienhe@trathanhtinh.vn</a></p>
+        <div class="socials" aria-hidden="true">
+          <a href="#" class="social">🐦</a>
+          <a href="#" class="social">📘</a>
+          <a href="#" class="social">📸</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Đăng ký nhận tin</h4>
+        <p>Nhận khuyến mãi & tin tức mới nhất qua email.</p>
+        <form id="footerNewsletter" class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!'); this.reset();">
+          <input type="email" placeholder="Email của bạn" required />
+          <button class="btn primary" type="submit">Đăng ký</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <small>© <span id="year"></span> Trà Thanh Tịnh. Bản quyền mọi quyền được bảo lưu.</small>
+        <div class="payment-methods" aria-hidden="true">
+          <span class="pm-label">Thanh toán:</span>
+          <span class="pm">VISA</span>
+          <span class="pm">Mastercard</span>
+          <span class="pm">MOMO</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Đóng giỏ hàng">✕</button>
+    </div>
+    <div class="cart-body" id="cartItems">
+     
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Tổng:</span>
+        <strong id="cartTotal">0₫</strong>
+      </div>
+      <button class="btn primary full" id="checkoutBtn">Thanh toán</button>
+    </div>
+  </aside>
+  <div id="pageOverlay" class="overlay"></div>
+
+  <script>
+    (function(){ const y = new Date().getFullYear(); const el = document.getElementById('year'); if(el) el.textContent = y; })();
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>
